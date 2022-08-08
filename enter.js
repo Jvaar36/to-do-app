@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const Enter = () => {
 
 const axios = require('axios').default;
@@ -32,7 +35,13 @@ axios.get('http://localhost/ToDoApp/read.php')
         data: params
       });
 
-      window.location.assign('http://localhost:3000');
+      //window.location.assign('http://localhost:3000');
+
+      ReactDOM.render(<Enter />, document.getElementById('box'));
+
+      document.getElementById('date').value = "";
+
+      document.getElementById('task').value = "";
 
     }
 
